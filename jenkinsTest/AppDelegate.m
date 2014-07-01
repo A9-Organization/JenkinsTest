@@ -15,7 +15,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     NSLog(@"THIS IS JENKINS TEST PRO,");
-//    http://localhost:8080/job/jenkinsTest/build?delay=0sec
+    
+    
+    
+    NSLog(@"测试自动化构建,commtiTime: %@",[NSDate date]);
     //do some change.
 //    NSLog(@"error")
     self.window.backgroundColor =	 [UIColor whiteColor];
