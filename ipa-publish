@@ -34,15 +34,18 @@
 
 
 #发布应用的url地址
-pulish_url="http://m.idavip.com/html"
+#pulish_url="http://m.idavip.com/html"
+pulish_url="http://pan.baidu.com/s/1qWz4H1y"
 
+#存放plist文件的地址,此地址必须支持https协议.
+plist_url="https://github.com/CoderA9/PlistArchive"
 #以下是邮箱的相关设置
 #收件人
-#email_reciver=mluogang@163.com
+#email_reciver=gangruo@126.com
 #发送者邮箱
-#email_sender=mluogang@163.com
+#email_sender=gangruo@126.com
 #邮箱用户名
-#email_username=mluogang@163.com
+#email_username=gangruo@126.com
 #邮箱密码
 #email_password=wo19890101
 #smtp服务器地址
@@ -166,7 +169,8 @@ cd $target_name
 #ipa下载url
 ipa_download_url=${pulish_url}/${target_name}/${target_name}.ipa
 #itms-services协议串
-ios_install_url="itms-services://?action=download-manifest&url=${pulish_url}/${target_name}/${target_name}.plist"
+#ios_install_url="itms-services://?action=download-manifest&url=${pulish_url}/${target_name}/${target_name}.plist"
+ios_install_url="itms-services://?action=download-manifest&url=${plist_url}/${target_name}.plist"
 
 #生成install.html文件
 cat << EOF > index.html
@@ -243,6 +247,28 @@ cat << EOF > ${target_name}.plist
 </plist>
 
 EOF
+
+#build文件夹路径
+build_path=${project_path}/build
+#进入build路径
+cd $build_path
+
+#删除ipa-build文件夹
+if [ -d ./ipa-build ];then
+rm -rf ipa-build
+fi
+
+#删除jenkinsTest.build文件夹
+if [ -d ./jenkinsTest.build ];then
+rm -rf jenkinsTest.build
+fi
+
+#删除Release-iphoneos文件夹
+if [ -d ./Release-iphoneos ];then
+rm -rf Release-iphoneos
+fi
+
+
 
 #调用upload脚本来将文件上传到服务器
 #${shell_path}/uploadItemsServicesFiles $target_name ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
