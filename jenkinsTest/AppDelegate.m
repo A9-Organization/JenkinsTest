@@ -16,9 +16,6 @@
     // Override point for customization after application launch.
     NSLog(@"THIS IS JENKINS TEST PRO,");
     
-    UIBarButtonItem *item;
-    
-    
     //do some change.
 //    NSLog(@"error")
     self.window.backgroundColor =	 [UIColor whiteColor];

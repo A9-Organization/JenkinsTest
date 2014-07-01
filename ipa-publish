@@ -269,20 +269,25 @@ rm -rf Release-iphoneos
 fi
 
 
-echo "shell path : ${shell_path}"
+
 #调用upload脚本来将文件上传到服务器
-${shell_path}/uploadItemsServicesFiles $target_name ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
+echo "调用upload脚本来将文件上传到服务器"
+${project_path}/uploadItemsServicesFiles $target_name ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
 
 #切换到tmp目录下
+
 serverIndexHtmlName=index.html
 cd /tmp
 rm ${serverIndexHtmlName}
 #从服务器下载index.html
-${shell_path}/sftpDownloadFile ${serverIndexHtmlName} ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
+echo "从服务器下载index.html"
+${project_path}/sftpDownloadFile ${serverIndexHtmlName} ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
 #更新index.html
-${shell_path}/updateLocalIndexHtml ${display_name} ${bundleShortVersion} ${ipa_download_url} ${ios_install_url} || exit
+echo "更新index.html"
+${project_path}/updateLocalIndexHtml ${display_name} ${bundleShortVersion} ${ipa_download_url} ${ios_install_url} || exit
 #上传index.html
-${shell_path}/sftpUploadFile ${serverIndexHtmlName} ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
+echo "上传index.html"
+${project_path}/sftpUploadFile ${serverIndexHtmlName} ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
 
 
 
