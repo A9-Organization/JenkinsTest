@@ -18,7 +18,7 @@
     
     
     
-    NSLog(@"5测试自动化构建,commtiTime: %@",[NSDate date]);
+    NSLog(@"7测试自动化构建,commtiTime: %@",[NSDate date]);
     //do some change.
 //    NSLog(@"error")
     self.window.backgroundColor =	 [UIColor whiteColor];
