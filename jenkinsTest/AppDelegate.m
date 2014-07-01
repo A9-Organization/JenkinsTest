@@ -18,6 +18,8 @@
     
     UIBarButtonItem *item;
     
+    
+    //do some change.
 //    NSLog(@"error")
     self.window.backgroundColor =	 [UIColor whiteColor];
     [self.window makeKeyAndVisible];
