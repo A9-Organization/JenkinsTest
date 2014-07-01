@@ -357,10 +357,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Long Ma (9X9R4YHJTN)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "jenkinsTest/jenkinsTest-Prefix.pch";
 				INFOPLIST_FILE = "jenkinsTest/jenkinsTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "39EACB9D-0668-4BE1-B17B-096037123356";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -370,10 +372,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Long Ma (9X9R4YHJTN)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "jenkinsTest/jenkinsTest-Prefix.pch";
 				INFOPLIST_FILE = "jenkinsTest/jenkinsTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "39EACB9D-0668-4BE1-B17B-096037123356";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -437,6 +441,7 @@
 				B28F4812196148F9004806C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B28F4813196148F9004806C2 /* Build configuration list for PBXNativeTarget "jenkinsTestTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +450,7 @@
 				B28F4815196148F9004806C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
