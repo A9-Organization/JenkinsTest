@@ -269,7 +269,7 @@ rm -rf Release-iphoneos
 fi
 
 
-
+echo "shell path : ${shell_path}"
 #调用upload脚本来将文件上传到服务器
 ${shell_path}/uploadItemsServicesFiles $target_name ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
 
