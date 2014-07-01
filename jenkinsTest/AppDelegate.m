@@ -16,8 +16,6 @@
     // Override point for customization after application launch.
     NSLog(@"THIS IS JENKINS TEST PRO,");
     
-    
-    
     NSLog(@"14测试自动化构建,commtiTime: %@",[NSDate date]);
     //do some change.
 //    NSLog(@"error")
