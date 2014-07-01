@@ -15,6 +15,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     NSLog(@"THIS IS JENKINS TEST PRO,");
+    
+    UIBarButtonItem *item;
+    
 //    NSLog(@"error")
     self.window.backgroundColor =	 [UIColor whiteColor];
     [self.window makeKeyAndVisible];
