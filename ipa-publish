@@ -26,7 +26,7 @@
 #须配置内容  start
 
 #sftp参数设置
-sftp_server=116.255.142.66
+sftp_server=m.idavip.com
 sftp_username="idavipapp"
 sftp_password="app168~!"
 sftp_workpath="/app"
@@ -151,11 +151,6 @@ cd $build_path
 
 #显示名称
 ipa_name="${display_name}"
-
-#IPA名称
-if [ $# = 3 ];then
-ipa_name=$3
-fi
 
 if [ -d ./$target_name ];then
 	rm -rf $target_name

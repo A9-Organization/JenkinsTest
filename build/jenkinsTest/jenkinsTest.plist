@@ -38,9 +38,9 @@
                <key>kind</key>
                <string>software</string>
                <key>subtitle</key>
-               <string>y</string>
+               <string>jenkinsTest</string>
                <key>title</key>
-               <string>y</string>
+               <string>jenkinsTest</string>
            </dict>
        </dict>
    </array>
