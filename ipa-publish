@@ -267,29 +267,29 @@ fi
 
 #调用upload脚本来将文件上传到服务器
 echo "调用upload脚本来将文件上传到服务器"
-#${project_path}/uploadItemsServicesFiles $target_name ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
+${project_path}/uploadItemsServicesFiles $target_name ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
 
 #切换到tmp目录下
 
-#serverIndexHtmlName=index.html
-#cd /tmp
-#rm ${serverIndexHtmlName}
+serverIndexHtmlName=index.html
+cd /tmp
+rm ${serverIndexHtmlName}
 #从服务器下载index.html
 echo "从服务器下载index.html"
-#${project_path}/sftpDownloadFile ${serverIndexHtmlName} ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
+${project_path}/sftpDownloadFile ${serverIndexHtmlName} ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
 #更新index.html
 echo "更新index.html"
-#${project_path}/updateLocalIndexHtml ${display_name} ${bundleShortVersion} ${ipa_download_url} ${ios_install_url} || exit
+${project_path}/updateLocalIndexHtml ${display_name} ${bundleShortVersion} ${ipa_download_url} ${ios_install_url} || exit
 #上传index.html
 echo "上传index.html"
-#${project_path}/sftpUploadFile ${serverIndexHtmlName} ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
+${project_path}/sftpUploadFile ${serverIndexHtmlName} ${sftp_server} ${sftp_username} ${sftp_password} ${sftp_workpath} || exit
 
 
 
 #发送邮件
-#if [ $should_email = y ];then
-#	email_title="${ipa_name}-IOS客户端更新"
-#	email_content="hi,\n\n    The app is updated recently.Use the safari browser on IOS device to download the app.Here is the URL: ${pulish_url}/${target_name} \n\n   To see the list of all iOS projects, open this URL: ${pulish_url} \n\n\n   This email is sent by the automantic shell which is created by ccf,so do not reply this email.\n\n\n\n\n  Thanks!"
-#	${shell_path}/sendEmail -f ${email_sender} -t ${email_reciver} -s ${email_smtphost} -u ${email_title} -xu ${email_username} -xp ${email_password} -m ${email_content}
-#fi
+if [ $should_email = y ];then
+	email_title="${ipa_name}-IOS客户端更新"
+	email_content="hi,\n\n    The app is updated recently.Use the safari browser on IOS device to download the app.Here is the URL: ${pulish_url}/${target_name} \n\n   To see the list of all iOS projects, open this URL: ${pulish_url} \n\n\n   This email is sent by the automantic shell which is created by ccf,so do not reply this email.\n\n\n\n\n  Thanks!"
+	${shell_path}/sendEmail -f ${email_sender} -t ${email_reciver} -s ${email_smtphost} -u ${email_title} -xu ${email_username} -xp ${email_password} -m ${email_content}
+fi
 

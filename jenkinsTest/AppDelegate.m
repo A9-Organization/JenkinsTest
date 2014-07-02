@@ -16,7 +16,7 @@
     // Override point for customization after application launch.
     NSLog(@"THIS IS JENKINS TEST PRO,");
     
-    NSLog(@"15测试自动化构建,commtiTime: %@",[NSDate date]);
+    NSLog(@"16测试自动化构建,commtiTime: %@",[NSDate date]);
     //do some change.
 //    NSLog(@"error")
     self.window.backgroundColor =	 [UIColor whiteColor];
